@@ -14,7 +14,7 @@ class Device1 : public SimpleDBus::Interface {
 
     // ----- METHODS -----
     void Connect();
-    void Disconnect();
+    void Disconnect(bool block = true);
     void Pair();
     void CancelPairing();
 

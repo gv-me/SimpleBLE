@@ -59,7 +59,7 @@ void Device::cancel_pairing() { device1()->CancelPairing(); }
 
 void Device::connect() { device1()->Connect(); }
 
-void Device::disconnect() { device1()->Disconnect(); }
+void Device::disconnect(bool block) { device1()->Disconnect(block); }
 
 std::string Device::address() { return device1()->Address(); }
 

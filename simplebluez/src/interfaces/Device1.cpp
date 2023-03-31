@@ -15,9 +15,13 @@ void Device1::Connect() {
     _conn->send_with_reply_and_block(msg);
 }
 
-void Device1::Disconnect() {
+void Device1::Disconnect(bool block) {
     auto msg = create_method_call("Disconnect");
-    _conn->send_with_reply_and_block(msg);
+    if(block) {
+        _conn->send_with_reply_and_block(msg);
+    } else {
+        _conn->send(msg);
+    }
 }
 
 void Device1::Pair() {
