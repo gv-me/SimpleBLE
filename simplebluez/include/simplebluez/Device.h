@@ -38,7 +38,7 @@ class Device : public SimpleDBus::Proxy {
 
     // ----- METHODS -----
     void connect();
-    void disconnect();
+    void disconnect(bool block = true);
     void pair();
     void cancel_pairing();
 
