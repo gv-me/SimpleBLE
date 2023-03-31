@@ -10,10 +10,14 @@ void Adapter1::StartDiscovery() {
     _conn->send_with_reply_and_block(msg);
 }
 
-void Adapter1::StopDiscovery() {
+void Adapter1::StopDiscovery(bool block) {
     auto msg = create_method_call("StopDiscovery");
-    _conn->send_with_reply_and_block(msg);
-    // NOTE: It might take a few seconds until the peripheral reports that is has actually stopped discovering.
+    if(block) {
+        _conn->send_with_reply_and_block(msg);
+        // NOTE: It might take a few seconds until the peripheral reports that is has actually stopped discovering.
+    } else {
+        _conn->send(msg);
+    }
 }
 
 SimpleDBus::Holder Adapter1::GetDiscoveryFilters() {

@@ -23,7 +23,7 @@ class Adapter : public SimpleDBus::Proxy {
 
     void discovery_filter(const DiscoveryFilter& filter);
     void discovery_start();
-    void discovery_stop();
+    void discovery_stop(bool block = true);
 
     std::shared_ptr<Device> device_get(const std::string& path);
     void device_remove(const std::string& path);
