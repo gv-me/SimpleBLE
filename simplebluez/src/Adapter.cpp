@@ -43,7 +43,7 @@ void Adapter::discovery_filter(const DiscoveryFilter& filter) { adapter1()->SetD
 
 void Adapter::discovery_start() { adapter1()->StartDiscovery(); }
 
-void Adapter::discovery_stop() { adapter1()->StopDiscovery(); }
+void Adapter::discovery_stop(bool block) { adapter1()->StopDiscovery(block); }
 
 std::shared_ptr<Device> Adapter::device_get(const std::string& path) {
     return std::dynamic_pointer_cast<Device>(path_get(path));

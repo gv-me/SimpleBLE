@@ -29,7 +29,7 @@ class Adapter1 : public SimpleDBus::Interface {
     // ----- METHODS -----
     void RemoveDevice(std::string device_path);
     void StartDiscovery();
-    void StopDiscovery();
+    void StopDiscovery(bool block = true);
     void SetDiscoveryFilter(DiscoveryFilter filter);
     SimpleDBus::Holder GetDiscoveryFilters();
 
