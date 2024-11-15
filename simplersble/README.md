@@ -1,29 +1,21 @@
 # SimpleRsBLE
 
-The ultimate fully-fledged cross-platform library and bindings for Bluetooth Low Energy (BLE).
+The ultimate cross-platform bindings for Bluetooth Low Energy (BLE).
 
 ## Overview
 
-The [SimpleBLE](https://github.com/OpenBluetoothToolbox/SimpleBLE/) project aims to provide
-fully cross-platform BLE libraries and bindings, designed for simplicity and ease of use
-with a licencing scheme chosen to be friendly towards commercial use. All specific operating
-system quirks are handled internally to provide a consistent behavior across all platforms.
-The libraries also provide first-class support for vendorization of all third-party
-dependencies, allowing for easy integration into existing projects.
+SimpleRsBLE provides Rust bindings for [SimpleBLE](https://github.com/OpenBluetoothToolbox/SimpleBLE/),
+a fully cross-platform BLE library, designed for simplicity and ease of use, with a consistent behavior and API across all platforms.
 
-If you want to use SimpleRsBLE and need help. **Please do not hesitate to reach out!**
+**IMPORTANT:** SimpleRsBLE is currently in the process of being rewritten from scratch to follow proper idiomatic Rust patterns.
 
--   Join our [Discord](https://discord.gg/N9HqNEcvP3) server.
--   Contact me: `kevin at dewald dot me`
+If you want to use SimpleRsBLE and need help, **please do not hesitate to reach out!**
 
-## Supported platforms
+- Visit our [ReadTheDocs](https://simpleble.readthedocs.io/en/latest/) page for comprehensive documentation
+- Visit our [website](https://simpleble.org) or email us at `contact@simpleble.org` for commercial licensing and professional support services
+- Join our [Discord](https://discord.gg/N9HqNEcvP3) server for community discussions and help
 
--   Windows: Windows 10+
--   Linux: Ubuntu 20.04+
--   MacOS: 10.15+ (except 12.0, 12.1, and 12.2)
--   iOS: 15.0+
-
-## Usage
+## Installation
 
 You can add SimpleRsBLE to your project by adding the following lines to your `Cargo.toml`:
 
@@ -32,15 +24,14 @@ You can add SimpleRsBLE to your project by adding the following lines to your `C
 simplersble = "0.6.0"
 ```
 
-Please review our [code examples](https://github.com/OpenBluetoothToolbox/SimpleBLE/tree/main/examples/simplersble/src/bin)
-on GitHub for more information on how to use SimpleRsBLE.
+Please review our [code examples](https://github.com/OpenBluetoothToolbox/SimpleBLE/tree/main/examples/simplersble/src/bin) on GitHub for more information on how to use SimpleRsBLE.
 
-## Contributing
+# License
 
-Pull requests are welcome. For major changes, please open an issue first to discuss
-what you would like to change.
+Since February 15th 2024, SimpleBLE is now available under the GNU General Public License version 3 (GPLv3), with the option for a commercial license without the GPLv3 restrictions available for a fee.
 
-## License
+**You can find more information on pricing and commercial terms of service on our [website](https://simpleble.org).**
 
-All components within this project that have not been bundled from
-external creators, are licensed under the terms of the [MIT Licence](https://github.com/OpenBluetoothToolbox/SimpleBLE/blob/main/LICENCE.md).
+For further enquiries, please contact us at `contact@simpleble.org`.
+
+**We offer free commercial licenses for small projects and early-stage companies - reach out to discuss your use case.**

@@ -5,21 +5,71 @@ All notable changes to this project will be documented in this file.
 
 The format is based on `Keep a Changelog`_, and this project adheres to `Semantic Versioning`_.
 
-[0.6.2] - XXXX-XX-XX
+[0.8.2] - XXXX-XX-XX
+--------------------
+
+**Added**
+
+-
+
+**Changed**
+
+-
+
+**Fixed**
+
+-
+
+
+[0.8.1] - 2024-11-05
+--------------------
+
+**Added**
+
+- (Android) Alpha preview of Android support.
+- (SimpleDBus) Added templated version of creation and getter functions for Holder class. *(Thanks lorsi96!)*
+
+**Changed**
+
+- Implemented standalone ByteArray class derived from `kvn::bytearray`. *(Thanks tlifschitz!)*
+-  **API CHANGE**: Notify and Indicate callback in C bindings now receive the peripheral handle as the first argument.
+
+**Fixed**
+
+- (SimpleBluez) Fixed improper handling of non `org.Bluez.Service1` objects within a `org.bluez.Device1` object. *(Thanks Kober Engineering!)*
+- (MacOS) Fixed incorrect storage and retrieval with standard Bluetooth UUIDs inside the peripheral class. *(Thanks TellowKrinkle!)*
+- (Python) Fixed incorrect handling of the GIL in certain functions. *(Thanks nomenquis and Medra AI!)*
+
+
+[0.7.X]
+--------------------
+
+This entire series is dedicated to reviewing and updating the license terms of the project.
+
+
+[0.7.0] - 2024-02-15
 --------------------
 
 **Added**
 
 - Function to query the version of SimpleBLE at runtime.
+- (Python) Missing API from SimpleBLE::Characteristic.
 
 **Changed**
 
 - (MacOS) Main adapter address is now hardcoded to allow caching based on adapter address. *(Thanks BlissChapman!)*
+- (Python) Release GIL when calling ``Peripheral.write_request`` and ``Peripheral.write_command``.
+- (MacOS) Rewrote the entire backend.
+- (MacOS) OperationFailed exception now contains the error message provided by the OS.
 
 **Fixed**
 
 - (MacOS) Remove unnecessary timeout during service discovery. *(Thanks BlissChapman!)*
+- (MacOS) Return correct list of devices when scanning. *(Thanks roozmahdavian!)*
+- (MacOS) Remove unnecessary timeout during characteristic notification. *(Thanks BlissChapman!)*
+- (MacOS) Remove unnecessary timeout during operations on characteristics.
 - (Windows) Failed connection attempt would not trigger an exception. *(Thanks eriklins!)*
+- (Linux) Use correct UUIDs for advertized services. *(Thanks Symbitic!)*
 
 
 [0.6.1] - 2023-03-14
